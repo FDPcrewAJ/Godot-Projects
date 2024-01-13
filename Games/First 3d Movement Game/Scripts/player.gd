@@ -56,6 +56,9 @@ func _input(event):
 
 
 func _physics_process(delta):
+	# Reset Scene when key is pressed
+	if Input.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
 	# Get movement inputs
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	# Handling Movement States

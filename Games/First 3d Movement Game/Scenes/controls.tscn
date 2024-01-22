@@ -20,4 +20,5 @@ WASD = Movement
 Shift = Run
 Ctrl = Crouch
 Alt + Mouse = Free Look
-R = Reset Scene"
+R = Reset Scene
+1-0 = Change Scenes"

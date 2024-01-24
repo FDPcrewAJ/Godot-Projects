@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 # Player Nodes
 @onready var neck = $Neck
 @onready var head = $Neck/Head

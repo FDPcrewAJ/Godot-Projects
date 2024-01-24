@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvbo0d7rp5dnk"]
+[gd_scene load_steps=6 format=3 uid="uid://bvbo0d7rp5dnk"]
 
 [ext_resource type="Texture2D" uid="uid://dl6p1n1573e2w" path="res://Textures/Prototype Textures/Green/texture_09.png" id="1_pkm2b"]
+[ext_resource type="Script" path="res://Scripts/Checkpoint.gd" id="2_ao55r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lk0s4"]
 albedo_texture = ExtResource("1_pkm2b")
@@ -32,7 +33,10 @@ material = SubResource("StandardMaterial3D_x2x87")
 
 [node name="Area3D" type="Area3D" parent="."]
 monitorable = false
+script = ExtResource("2_ao55r")
 
 [node name="CheckpointTrigger" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49819, 0)
 shape = SubResource("BoxShape3D_rkpbd")
+
+[connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]

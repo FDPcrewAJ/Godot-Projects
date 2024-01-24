@@ -20,5 +20,6 @@ WASD = Movement
 Shift = Run
 Ctrl = Crouch
 Alt + Mouse = Free Look
-R = Reset Scene
+R = Load Checkpoint
+T = Reset Scene
 1-0 = Change Scenes"

@@ -36,6 +36,9 @@ var slide_speed = 10.0
 const mouse_sens = 0.15
 var direction = Vector3.ZERO
 
+# Checkpoint Variable
+var check_point_pos = Vector3.ZERO
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -147,5 +150,12 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, current_speed)
 		velocity.z = move_toward(velocity.z, 0, current_speed)
+	if Input.is_action_pressed("load_checkpoint"):
+		position = check_point_pos
 
 	move_and_slide()
+
+func save_check_point(pos_x, pos_y, pos_z):
+	check_point_pos.x = pos_x
+	check_point_pos.y = pos_y
+	check_point_pos.z = pos_z

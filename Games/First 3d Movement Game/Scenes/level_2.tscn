@@ -121,13 +121,13 @@ use_collision = true
 material = SubResource("StandardMaterial3D_ka01i")
 
 [node name="Checkpoint" parent="World/Purple_Boxes/Checkpoints" instance=ExtResource("5_os5dj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 10, -6)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 10, -6)
 
 [node name="Checkpoint2" parent="World/Purple_Boxes/Checkpoints" instance=ExtResource("5_os5dj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 14, 15)
 
 [node name="Checkpoint3" parent="World/Purple_Boxes/Checkpoints" instance=ExtResource("5_os5dj")]
-transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 16, 33, 56)
+transform = Transform3D(-1, 0, -2.78182e-08, 0, 1, 0, 2.78182e-08, 0, -1, 16, 33, 56)
 
 [node name="cpt 1" type="Node3D" parent="World/Purple_Boxes"]
 
@@ -310,6 +310,13 @@ material = SubResource("StandardMaterial3D_ka01i")
 
 [node name="CSGBox3D46" type="CSGBox3D" parent="World/Purple_Boxes/cpt 2"]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 16, 32.5, 45)
+use_collision = true
+material = SubResource("StandardMaterial3D_ka01i")
+
+[node name="cpt 3" type="Node3D" parent="World/Purple_Boxes"]
+
+[node name="CSGBox3D47" type="CSGBox3D" parent="World/Purple_Boxes/cpt 3"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 16, 32.5, 63)
 use_collision = true
 material = SubResource("StandardMaterial3D_ka01i")
 

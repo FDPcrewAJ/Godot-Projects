@@ -12,7 +12,7 @@ albedo_texture = ExtResource("1_pkm2b")
 uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rkpbd"]
-size = Vector3(1.5, 3, 0.5)
+size = Vector3(1.5, 2, 0.5)
 
 [node name="Checkpoint" type="Node3D"]
 
@@ -32,11 +32,12 @@ size = Vector3(3, 0.5, 0.5)
 material = SubResource("StandardMaterial3D_x2x87")
 
 [node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 monitorable = false
 script = ExtResource("2_ao55r")
 
 [node name="CheckpointTrigger" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49819, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00161, 0)
 shape = SubResource("BoxShape3D_rkpbd")
 
 [connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]

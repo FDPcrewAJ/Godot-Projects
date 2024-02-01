@@ -148,6 +148,6 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, current_speed)
 		velocity.z = move_toward(velocity.z, 0, current_speed)
 	if Input.is_action_pressed("load_checkpoint"):
-		set_position(checkpt.check_point_pos)
+		global_position = global.check_point_pos
 
 	move_and_slide()

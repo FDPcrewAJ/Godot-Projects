@@ -48,8 +48,13 @@ glow_enabled = true
 
 [node name="world" type="Node3D" parent="."]
 
-[node name="Checkpoint" parent="world" instance=ExtResource("2_w06sm")]
+[node name="Checkpoints" type="Node3D" parent="world"]
+
+[node name="Checkpoint" parent="world/Checkpoints" instance=ExtResource("2_w06sm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17)
+
+[node name="Checkpoint2" parent="world/Checkpoints" instance=ExtResource("2_w06sm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -15)
 
 [node name="Floor" type="CSGBox3D" parent="world"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
